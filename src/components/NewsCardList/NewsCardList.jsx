@@ -1,0 +1,1 @@
+import "./NewsCardList.css";

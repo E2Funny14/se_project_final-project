@@ -1,6 +1,17 @@
-# React + Vite
+# NewsExplorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React (Vite) single‑page app to search recent news and save favorites locally.
+
+## What It Does
+- Search news articles by keyword.
+- “Show more” button for more articles.
+- Saves && removes articles.
+- View saved articles with keyword.
+- Sign in && Sign up.
+- Responsive layout for desktop, tablet, mobile.
+
+## Tech Used
+React, React Router, Vite, Fetch API, Plain CSS, Normalize.css, ESLint.
 
 Currently, two official plugins are available:
 

@@ -1,0 +1,149 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 104px;
+  color: white;
+}
+
+.search-form__input_type_error {
+  color: #FF0000;
+}
+
+.search-form__input_type_error::placeholder {
+  color: #FF0000;
+  opacity: 0.8;
+}
+
+.search-form__title {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 64px;
+  margin: 0 0 32px 0;
+  max-width: 608px;
+  text-align: left;
+}
+
+.search-form__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 88px 0;
+  max-width: 720px;
+}
+
+.search-form__form {
+  display: flex;
+  width: 100%;
+  max-width: 608px;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.search-form__input {
+  flex: 1;
+  padding: 22px 24px;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.search-form__input::placeholder {
+  color: #B6BCBF;
+}
+
+.search-form__button {
+  position: absolute;
+  right: -1px;
+  padding: 22px 24px;
+  background-color: #2F71E5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 500;
+  width: 168px;
+  border-radius: 100px;
+}
+
+.search-form__button:disabled {
+  background-color: #B6BCBF;
+  cursor: not-allowed;
+}
+
+.search-form__button:hover {
+  background-color: #347CE8;
+}
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    padding: 38px 40px;
+  }
+  
+  .search-form__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+  
+  .search-form__subtitle {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
+  
+  .search-form__form {
+    max-width: 452px;
+  }
+  
+  .search-form__button {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-form {
+    padding: 30px 16px;
+    text-align: left;
+  }
+  
+  .search-form__title {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  
+  .search-form__subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 122px;
+    text-align: left;
+  }
+  
+  .search-form__form {
+    flex-direction: column;
+    max-width: 288px;
+    border-radius: 0;
+    height: auto;
+    gap: 16px;
+  }
+  
+  .search-form__input {
+    border-radius: 100px;
+    padding: 14px 16px;
+    height: 56px;
+  }
+  
+  .search-form__button {
+    position: static;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+  }
+}

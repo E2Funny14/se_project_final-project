@@ -1,3 +1,4 @@
+<<<<<<< stage-1-frontend-and-api
 # NewsExplorer
 
 A simple React (Vite) single‑page app to search recent news and save favorites locally.
@@ -27,3 +28,5 @@ npm run deploy
 
 Live URL:
 https://E2Funny14.github.io/se_project_final-project/
+=======
+# se_project_final-project

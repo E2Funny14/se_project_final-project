@@ -11,19 +11,21 @@ export const searchNews = async (query) => {
   const params = new URLSearchParams({
     q: query,
     apiKey: APIkey,
-    from: sevenDaysAgo.toISOString().split('T')[0],
-    to: today.toISOString().split('T')[0],
+    from: sevenDaysAgo.toISOString().split("T")[0],
+    to: today.toISOString().split("T")[0],
     pageSize: 100,
+    language: "en",
+    sortBy: "publishedAt",
   });
 
   try {
     const response = await fetch(`${NEWS_API_BASE_URL}?${params}`);
     if (!response.ok) {
-      throw new Error('News search failed');
+      throw new Error("Request failed. Please try again later.");
     }
     return response.json();
   } catch (error) {
-    console.error('Error searching news:', error);
+    console.error("Error searching news:", error);
     throw error;
   }
 };

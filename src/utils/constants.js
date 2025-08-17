@@ -1,7 +1,7 @@
-const NEWS_API_BASE_URL = process.env.NODE_ENV === "production"
+const NEWS_API_BASE_URL = import.meta.env.PROD
   ? "https://nomoreparties.co/news/v2/everything"
   : "https://newsapi.org/v2/everything";
 
-const APIkey = "2ae77b85ee784d098b4ae504d1a2eca8";
+const APIkey = import.meta.env.VITE_NEWS_API_KEY;
 
 export { NEWS_API_BASE_URL, APIkey };

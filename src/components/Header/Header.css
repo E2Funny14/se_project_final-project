@@ -40,7 +40,7 @@
   background-color: #1a1b22;
 }
 
-.header::after {
+.header_saved::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -56,6 +56,10 @@
   font-weight: 700;
   line-height: 24px;
   color: white;
+}
+
+.header.open {
+  background-color: #1a1b22;
 }
 
 .header__menu-button {
@@ -106,11 +110,11 @@
 .header__close-icon {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1); /* white on dark */
+  filter: brightness(0) invert(1);
 }
 
 .header_saved .header__close-icon {
-  filter: none; /* dark on light */
+  filter: none;
 }
 
 .header__nav {
@@ -219,7 +223,7 @@
     left: 0;
     right: 0;
     background-color: #1a1b22;
-    z-index: 1200; /* above .modal (1000) */
+    z-index: 1200;
   }
 
   .header.modal-open .header__menu-button {
@@ -310,7 +314,7 @@
   }
 
   .header__button_active::after {
-    display : none;
+    display: none;
   }
 
   .header.open .header__menu-button,

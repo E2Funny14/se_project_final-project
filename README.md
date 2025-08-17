@@ -1,4 +1,3 @@
-<<<<<<< stage-1-frontend-and-api
 # NewsExplorer
 
 A simple React (Vite) single‑page app to search recent news and save favorites locally.
@@ -10,6 +9,7 @@ A simple React (Vite) single‑page app to search recent news and save favorites
 - View saved articles with keyword summary
 - Sign in & Sign up (mock auth)
 - Responsive layout (desktop / tablet / mobile)
+- HashRouter for GitHub Pages deployment
 
 ## Tech Used
 React, React Router (HashRouter), Vite, Fetch API, Plain CSS, normalize.css, ESLint
@@ -27,6 +27,4 @@ npm run deploy
 ```
 
 Live URL:
-https://E2Funny14.github.io/se_project_final-project/
-=======
-# se_project_final-project
+https://github.com/E2Funny14/se_project_final-project.git

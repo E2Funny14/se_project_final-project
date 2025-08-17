@@ -2,21 +2,30 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  background-image: url('../src/assets/background-image.svg');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  background-image: url("../src/assets/background-image.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 576px;
+}
+
+main {
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 768px) {
-  .app {
-    height: 400px
+  .hero-section {
+    min-height: 400px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .app {
-    height: 536px;
+  .hero-section {
+    min-height: 536px;
   }
 }

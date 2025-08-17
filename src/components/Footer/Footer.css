@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #e8e8e8;
+  background-color: white;
 }
 
 .footer__copyright {
@@ -65,26 +66,29 @@
 @media screen and (max-width: 320px) {
   .footer {
     padding: 20px 16px;
-    flex-direction: column-reverse;
-    gap: 38px;
+    flex-direction: column;
+    gap: 32px;
     align-items: flex-start;
     border-top: none;
   }
 
   .footer__copyright {
     font-size: 14px;
+    order: 2;
   }
 
   .footer__nav {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    order: 1;
   }
 
   .footer__links {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 
   .footer__link {
@@ -93,8 +97,11 @@
 
   .footer__social {
     display: flex;
-    align-self: flex-end;
-    position: relative;
-    bottom: 82px;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer__icon-linkedin {
+    padding-left: 0;
   }
 }

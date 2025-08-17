@@ -3,7 +3,15 @@ import NewsCard from "../NewsCard/NewsCard";
 import Preloader from "../Preloader/Preloader";
 import "./NewsCardList.css";
 
-function NewsCardList({ articles, isLoading, searchError, isLoggedIn, onSaveArticle, savedArticles, searchQuery }) {
+function NewsCardList({
+  articles,
+  isLoading,
+  searchError,
+  isLoggedIn,
+  onSaveArticle,
+  savedArticles,
+  searchQuery,
+}) {
   const [visibleCards, setVisibleCards] = useState(3);
 
   useEffect(() => {
@@ -18,8 +26,8 @@ function NewsCardList({ articles, isLoading, searchError, isLoggedIn, onSaveArti
     return (
       <section className="news-card-list">
         <p className="news-card-list__error">
-          {searchError === "NOT_FOUND" 
-            ? "Nothing found" 
+          {searchError === "NOT_FOUND"
+            ? "Nothing found"
             : "Sorry, something went wrong during the request. Please try again later."}
         </p>
       </section>
@@ -31,7 +39,7 @@ function NewsCardList({ articles, isLoading, searchError, isLoggedIn, onSaveArti
   }
 
   const handleShowMore = () => {
-    setVisibleCards(prev => prev + 3);
+    setVisibleCards((prev) => prev + 3);
   };
 
   const visibleArticles = articles.slice(0, visibleCards);
@@ -41,15 +49,20 @@ function NewsCardList({ articles, isLoading, searchError, isLoggedIn, onSaveArti
     <section className="news-card-list">
       <h2 className="news-card-list__title">Search Results</h2>
       <div className="news-card-list__grid">
-        {visibleArticles.map((article, index) => (
-          <NewsCard key={index} article={{...article, keyword: searchQuery}} isLoggedIn={isLoggedIn} onSaveArticle={() => onSaveArticle({...article, keyword: searchQuery})} isSaved={savedArticles?.some(saved => saved.url === article.url)}  />
+        {visibleArticles.map((article) => (
+          <NewsCard
+            key={article.url}
+            article={{ ...article, keyword: searchQuery }}
+            isLoggedIn={isLoggedIn}
+            onSaveArticle={() =>
+              onSaveArticle({ ...article, keyword: searchQuery })
+            }
+            isSaved={savedArticles?.some((saved) => saved.url === article.url)}
+          />
         ))}
       </div>
       {hasMoreArticles && (
-        <button 
-          className="news-card-list__show-more" 
-          onClick={handleShowMore}
-        >
+        <button className="news-card-list__show-more" onClick={handleShowMore}>
           Show more
         </button>
       )}

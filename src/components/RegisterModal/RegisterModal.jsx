@@ -15,7 +15,6 @@ function RegisterModal({ isOpen, onClose, onLoginClick, onRegister }) {
     setEmail("");
     setPassword("");
     setUsername("");
-    onClose();
   };
 
   return (

@@ -67,7 +67,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 426px) {
   .saved-news__header {
     padding: 0 16px;
     margin-bottom: 24px;

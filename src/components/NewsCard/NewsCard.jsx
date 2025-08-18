@@ -9,7 +9,7 @@ function NewsCard({
   onSaveArticle,
   onRemoveArticle,
 }) {
-  const { title, description, url, urlToImage, publishedAt, source, keyword } =
+  const { title, description,  urlToImage, publishedAt, source, keyword } =
     article;
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const location = useLocation();

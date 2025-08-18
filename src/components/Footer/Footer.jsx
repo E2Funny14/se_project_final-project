@@ -1,4 +1,6 @@
 import "./Footer.css";
+import githubIcon from "../../assets/github.svg"
+import linkedinIcon from "../../assets/linkedin.svg"
 
 function Footer() {
   return (
@@ -16,7 +18,7 @@ function Footer() {
         <div className="footer__social">
           <a href="https://github.com">
             <img
-              src="https://tse3.mm.bing.net/th/id/OIP.PJoXmwv3lYJ2f7Pr1vtfkQHaEK?pid=Api&P=0&h=220"
+              src={githubIcon}
               alt="GitHub"
               className="footer__icon"
             />
@@ -27,7 +29,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://tse2.mm.bing.net/th/id/OIP.w_zDkEJ9aLiWR-g0rff8hwHaHa?pid=Api&P=0&h=220"
+              src={linkedinIcon}
               alt="LinkedIn"
               className="footer__icon-linkedin"
             />

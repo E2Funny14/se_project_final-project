@@ -1,6 +1,5 @@
 .app {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -24,7 +23,7 @@ main {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 426px) {
   .hero-section {
     min-height: 536px;
   }

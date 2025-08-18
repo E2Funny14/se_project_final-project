@@ -39,7 +39,7 @@ function SearchForm({
   return (
     <section className="search-form">
       <h1 className="search-form__title">
-        What's going on in
+        What&apos;s going on in
         <br /> the world?
       </h1>
       <p className="search-form__subtitle">

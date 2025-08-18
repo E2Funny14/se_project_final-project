@@ -8,6 +8,7 @@ import Footer from "../src/components/Footer/Footer";
 import SavedNews from "../src/components/SavedNews/SavedNews";
 import LoginModal from "../src/components/LoginModal/LoginModal";
 import RegisterModal from "../src/components/RegisterModal/RegisterModal";
+import SuccessModal from "../src/components/SuccessModal/SuccessModal";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
+  const [isSuccessModalOpen, setSuccessModalOpen] = useState(false);
 
   const handleLoginClick = () => {
     setRegisterModalOpen(false);
@@ -34,6 +36,7 @@ function App() {
   const handleCloseModals = () => {
     setLoginModalOpen(false);
     setRegisterModalOpen(false);
+    setSuccessModalOpen(false);
   };
 
   const handleSearchResults = (articles) => {
@@ -75,10 +78,18 @@ function App() {
     handleCloseModals();
   };
 
-  const handleRegister = (userData) => {
-    console.log("Registered:", userData);
+  // const handleRegister = (userData) => {
+  //   handleCloseModals();
+  //   setSuccessModalOpen(true);
+  // };
+  const handleRegister = () => {
     handleCloseModals();
-    handleLoginClick();
+    setSuccessModalOpen(true);
+  };
+
+  const handleSuccessModalLoginClick = () => {
+    setSuccessModalOpen(false);
+    setLoginModalOpen(true);
   };
 
   const handleLogout = () => {
@@ -159,6 +170,11 @@ function App() {
           onClose={handleCloseModals}
           onLoginClick={handleLoginClick}
           onRegister={handleRegister}
+        />
+        <SuccessModal
+          isOpen={isSuccessModalOpen}
+          onClose={handleCloseModals}
+          onLoginClick={handleSuccessModalLoginClick}
         />
       </div>
     </HashRouter>

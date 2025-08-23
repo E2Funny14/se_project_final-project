@@ -1,3 +1,4 @@
+
 # NewsExplorer
 
 A simple React (Vite) single‑page app to search recent news and save favorites locally.
@@ -28,3 +29,5 @@ npm run deploy
 
 Live URL:
 https://github.com/E2Funny14/se_project_final-project.git
+# se_project_final-project
+

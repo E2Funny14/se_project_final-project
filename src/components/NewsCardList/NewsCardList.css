@@ -1,14 +1,25 @@
 .news-card-list {
-  padding: 80px 104px;
+  padding: 80px 0;
   background: #f5f6f7;
+  width: 100%;
+  position: relative;
+}
+
+.news-card-list__container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 .news-card-list__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 64px;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  width: 100%;
+  gap: 24px;
+  padding: 0;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+  transition: grid-template-columns 0.3s;
 }
 
 .news-card-list__show-more {
@@ -37,19 +48,53 @@
   color: #b6bcbf;
 }
 
-@media screen and (max-width: 768px) {
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 356px;
+  margin: 0 auto;
+}
+
+.not-found__icon {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 24px;
+}
+
+.not-found__title {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+  margin: 0 0 16px;
+}
+
+.not-found__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) and (min-width: 464px) {
   .news-card-list {
-    padding: 32px 40px;
+    padding: 64px 0;
   }
 
   .news-card-list__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     gap: 16px;
+    padding: 24px 40px;
   }
 
   .news-card-list__title {
     font-size: 22px;
     margin-bottom: 24px;
+    font-family: "Roboto Slab", "Times New Roman", serif;
   }
 
   .news-card-list__show-more {
@@ -57,9 +102,9 @@
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 466px) and (min-width: 319px) {
   .news-card-list {
-    padding: 32px 16px;
+    padding: 32px 0;
   }
 
   .news-card-list__grid {
@@ -71,7 +116,7 @@
     font-size: 30px;
     line-height: 34px;
     font-weight: 400;
-    padding: 0 0 58px 0;
+    padding: 32px 16px 58px 0;
     margin: 0;
   }
 

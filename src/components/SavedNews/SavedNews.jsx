@@ -24,31 +24,39 @@ function SavedNews({ savedArticles = [], onRemoveArticle, currentUser }) {
 
   return (
     <section className="saved-news">
-      <div className="saved-news__header">
-        <p className="saved-news__subtitle">Saved articles</p>
-        <h2 className="saved-news__title">
-          {savedArticles?.length > 0
-            ? `${currentUser?.name ? `${currentUser.name}, ` : ""}you have ${
-                savedArticles.length
-              } saved article${savedArticles.length === 1 ? "" : "s"}`
-            : "No saved articles yet"}
-        </h2>
-        {savedArticles.length > 0 && (
-          <p className="saved-news__keywords">
-            By keywords: {getKeywordsList()}
-          </p>
-        )}
+      <div className="saved-news__header-bg">
+        <div className="container saved-news__container">
+          <div className="saved-news__header">
+            <p className="saved-news__subtitle">Saved articles</p>
+            <h2 className="saved-news__title">
+              {savedArticles?.length > 0
+                ? `${
+                    currentUser?.name ? `${currentUser.name}, ` : ""
+                  }you have ${savedArticles.length} saved article${
+                    savedArticles.length === 1 ? "" : "s"
+                  }`
+                : "No saved articles yet"}
+            </h2>
+            {savedArticles.length > 0 && (
+              <p className="saved-news__keywords">
+                By keywords: {getKeywordsList()}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
-      <div className="saved-news__grid">
-        {savedArticles?.map((article) => (
-          <NewsCard
-            key={article.url}
-            article={article}
-            isLoggedIn={true}
-            isSaved={true}
-            onRemoveArticle={() => onRemoveArticle(article)}
-          />
-        ))}
+      <div className="container saved-news__container">
+        <div className="saved-news__grid">
+          {savedArticles?.map((article) => (
+            <NewsCard
+              key={article.url}
+              article={article}
+              isLoggedIn={true}
+              isSaved={true}
+              onRemoveArticle={() => onRemoveArticle(article)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

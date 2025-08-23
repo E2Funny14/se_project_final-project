@@ -10,13 +10,14 @@ function Header({
   onLogout,
   isLoginModalOpen,
   isRegisterModalOpen,
+  isSuccessModalOpen,
   onLoginClick,
   onCloseModals,
 }) {
   const location = useLocation();
   const isOnSavedNews = location.pathname === "/saved-news";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const anyModalOpen = isLoginModalOpen || isRegisterModalOpen;
+  const anyModalOpen = isLoginModalOpen || isRegisterModalOpen || isSuccessModalOpen;
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -44,6 +45,7 @@ function Header({
         isMenuOpen ? "open" : ""
       } ${anyModalOpen ? "modal-open" : ""}`}
     >
+      <div className="container header__container">
       <h1 className="header__title">NewsExplorer</h1>
       <button
         className="header__menu-button"
@@ -102,6 +104,7 @@ function Header({
           </button>
         )}
       </nav>
+    </div>
     </header>
   );
 }

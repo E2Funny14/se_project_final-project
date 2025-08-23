@@ -1,34 +1,53 @@
 .saved-news {
   padding: 40px 0 0;
-  background-color: white;
+  background-color: #f5f6f7;
   min-height: calc(100vh - 80px - 80px);
+  width: 100%;
+  position: relative;
+}
+
+.saved-news__header-bg {
+  width: 100vw;
+  background: white;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  top: -40px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 .saved-news__container {
-  background-color: white;
+  background-color: transparent;
 }
 
 .saved-news__header {
   margin-bottom: 48px;
-  padding: 0 104px;
+  padding: 0;
+  max-width: 1232px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
 }
 
 .saved-news__subtitle {
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: rgba(26, 27, 34, 0.5);
   margin: 0 0 28px;
 }
 
 .saved-news__title {
-  font-family: "Roboto Slab", sans-serif;
   font-size: 40px;
   color: #1a1b22;
   margin: 0;
 }
 
 .saved-news__keywords {
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #1a1b22;
   margin: 30px 0 0;
@@ -36,16 +55,16 @@
 
 .saved-news__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   gap: 16px;
   background-color: #f5f6f7;
-  padding: 32px 104px;
+  padding: 32px 0;
   width: 100%;
   box-sizing: border-box;
   min-height: 468px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 466px) {
   .saved-news__header {
     padding: 0 40px;
     margin-bottom: 32px;
@@ -61,13 +80,13 @@
   }
 
   .saved-news__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
     gap: 16px;
     padding: 24px 40px;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 466px) and (min-width: 319px) {
   .saved-news__header {
     padding: 0 16px;
     margin-bottom: 24px;
@@ -83,7 +102,7 @@
 
   .saved-news__grid {
     grid-template-columns: 1fr;
-    padding: 16px 16px;
+    padding: 16px 0;
     gap: 10px;
   }
 }

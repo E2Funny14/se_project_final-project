@@ -78,10 +78,6 @@ function App() {
     handleCloseModals();
   };
 
-  // const handleRegister = (userData) => {
-  //   handleCloseModals();
-  //   setSuccessModalOpen(true);
-  // };
   const handleRegister = () => {
     handleCloseModals();
     setSuccessModalOpen(true);
@@ -103,6 +99,7 @@ function App() {
     onLogout: handleLogout,
     isLoginModalOpen,
     isRegisterModalOpen,
+    isSuccessModalOpen,
     onLoginClick: handleLoginClick,
     onCloseModals: handleCloseModals,
   };

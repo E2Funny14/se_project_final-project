@@ -1,29 +1,23 @@
 .app {
-  width: 100%;
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .hero-section {
-  background-image: url("../src/assets/background-image.svg");
+  background-image: url("../src/assets/background-image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-main {
-  flex-grow: 1;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 466px) {
   .hero-section {
     min-height: 400px;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 466px) and (min-width: 319px) {
   .hero-section {
     min-height: 536px;
   }

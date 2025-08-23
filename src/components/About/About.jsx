@@ -1,9 +1,10 @@
 import "./About.css";
-import avatarImage from "../../assets/avatar.svg";
+import avatarImage from "../../assets/avatar.png";
 
 function About() {
   return (
     <section className="about">
+      <div className="container about__container">
       <div className="about__content">
         <h2 className="about__title">About The author</h2>
         <p className="about__subtitle">
@@ -25,6 +26,7 @@ function About() {
         src={avatarImage}
         alt="About Avatar"
       />
+    </div>
     </section>
   );
 }

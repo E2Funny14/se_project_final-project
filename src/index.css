@@ -1,39 +1,63 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("./fonts/Roboto-Regular.woff2") format("woff2"),
-    url("./fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./fonts/Roboto-Medium.woff2") format("woff2"),
-    url("./fonts/Roboto-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto Slab";
-  src: url("./fonts/RobotoSlab-Regular.woff2") format("woff2"),
-    url("./fonts/RobotoSlab-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap');
 
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+h1, h2, h3, h4, h5, h6, .header__title {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.search-form__title,
+.news-card__title,
+.about__title {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+.header__button,
+.header__link,
+.footer__link,
+.search-form__button,
+.news-card__source,
+.news-card__text,
+.news-card__date,
+.about__subtitle,
+.footer__copyright,
+.footer__nav,
+.footer__links,
+.footer__social {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: -webkit-fill-available;
+  padding-left: 104px;
+  padding-right: 104px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 466px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 466px) and (min-width: 319px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }

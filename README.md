@@ -28,6 +28,6 @@ npm run deploy
 ```
 
 Live URL:
-https://github.com/E2Funny14/se_project_final-project.git
+http://localhost:3000/se_project_final-project/
 # se_project_final-project
 

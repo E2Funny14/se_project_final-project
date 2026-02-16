@@ -1,0 +1,24 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  background-image: url("../src/assets/background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) and (min-width: 466px) {
+  .hero-section {
+    min-height: 400px;
+  }
+}
+
+@media screen and (max-width: 466px) and (min-width: 319px) {
+  .hero-section {
+    min-height: 536px;
+  }
+}

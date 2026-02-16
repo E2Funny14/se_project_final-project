@@ -1,0 +1,129 @@
+.footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e8e8e8;
+  background-color: white;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1232px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer__copyright {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #b6bcbf;
+  margin: 0;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer__links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__link {
+  color: #1a1b22;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.footer__link:hover {
+  opacity: 0.7;
+}
+
+.footer__icon {
+  width: 44px;
+  height: 24px;
+}
+
+.footer__icon-linkedin {
+  width: 24px;
+  height: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 466px) {
+  .footer {
+    padding: 20px 40px;
+  }
+  .footer__nav {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 466px) and (min-width: 319px) {
+  .footer {
+    padding: 20px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    border-top: none;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+  }
+
+  .footer__nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 0;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .footer__link {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .footer__social {
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .footer__copyright {
+    font-size: 16px;
+    color: #b6bcbf;
+    margin-top: 32px;
+    margin-bottom: 0;
+    order: 2;
+    width: 100%;
+  }
+}
